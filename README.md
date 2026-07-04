@@ -1,4 +1,6 @@
-# Nuxt Minimal Starter
+# My Portfolio
+This portfolio has been devloped using Nuxt v4 and TailwindCSS. 
+By changing ts files in data folder, this project can be used as your portfolio. 
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
