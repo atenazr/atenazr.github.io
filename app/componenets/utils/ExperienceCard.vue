@@ -1,27 +1,27 @@
 <template>
 
-    <div class="w-full card flex flex-col xl:h-[580px] bg-white p-4 xl:px-6">
-      <div class="mb-1 xl:mb-2">
-        <nuxt-icon class="text-[48px] text-main-yellow" :name="icon" />
+    <div class="w-full card flex flex-col xl:h-[400px] bg-white p-4 xl:px-6">
+      <div class="mb-1">
+        <nuxt-icon class="text-[42px] text-main-yellow" :name="icon" />
       </div>
-      <div class="flex flex-col md:flex-row mb-2">
-        <div class="xl:text-lg font-semibold">
+      <div class="flex flex-col md:flex-row mb-1">
+        <div class=" font-semibold">
           {{ title }}
         </div>
-        <div class="mt-2 md:mt-0 ml-auto text-sm font-semibold">
+        <div class="mt-1 md:mt-0 ml-auto text-xs font-semibold">
           {{ duration }}
         </div>
       </div>
-      <div class="text-sm xl:text-base mb-2">
+      <div class="text-sm mb-1">
         {{ company }}
       </div>
-      <p v-html="description" class="text-sm xl:text-base text-justify mb-2">
+      <p v-html="description" class="text-sm text-justify mb-1">
       </p>
       <div v-if="!!images">
 <!--        {{ item.images }}-->
       </div>
       <div v-if="!!link1" class=" xl:mt-auto">
-          <a class="text-sm md:text-base hover:text-main-yellow font-semibold" :href="link1" target="_blank">Link</a>
+          <a class="text-sm hover:text-main-yellow font-semibold" :href="link1" target="_blank">Link</a>
       </div>
     </div>
 
