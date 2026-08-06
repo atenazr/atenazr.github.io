@@ -1,1 +1,0 @@
-import{_ as o}from"./yH5s9yhK.js";import{_ as s}from"./D7DcaSI_.js";import{d as a,B as r,E as e,R as n,A as _}from"./DDIC2XpS.js";import"./BJ0DgAg_.js";import"./C1q_z96D.js";const m={class:"font-inter"},B=a({__name:"default",setup(c){return(t,i)=>(_(),r("div",m,[e(o),n(t.$slots,"default"),e(s)]))}});export{B as default};
