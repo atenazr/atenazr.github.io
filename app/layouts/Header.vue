@@ -10,7 +10,7 @@
                class="w-1/3 absolute rounded-2xl overflow-hidden duration-[1.5s] ease-in-out top-[50px] border-t border-white  z-20">
             <div class="w-full">
                 <div v-for="item in menus" :key="item.id" class="w-full">
-                  <a class=" bg-secondary-white inline-block w-full font-bold  p-4  border-b border-main-dark-blue text-main-dark-blue hover:text-main-yellow"
+                  <a class=" bg-secondary-white  w-full inline-block font-bold  p-4  border-b border-main-dark-blue text-main-dark-blue hover:text-main-yellow"
                      v-if="item.name== 'Experience'" :href="item.link">
                     {{ item.name }}
                   </a>
