@@ -5,12 +5,12 @@
       <div class="w-full min-h-dvh relative">
         <div class="text-secondary-white w-full h-full absolute top-1/2 ">
           <div class="w-full flex flex-col items-center justify-center">
-            <div class="text-center text-2xl md:text-3xl xl:text-5xl font-bold">
+            <div class="text-center font-script text-2xl md:text-3xl xl:text-6xl font-bold">
               <span class="text-main-yellow">F</span>ATEMEH <span class="text-main-yellow">Z</span>ARE
             </div>
-            <div class="mt-3 xl:mt-6 text-center text-lg xl:text-xl font-script">
-              Researcher <span class="mx-1 inline-block w-[6px] xl:w-[10px] h-[6px] xl:h-[10px] bg-white rounded-full"></span>
-              Developer <span class="mx-1 inline-block w-[6px] xl:w-[10px] h-[6px] xl:h-[10px] bg-white rounded-full"></span> Teacher
+            <div class="mt-3 xl:mt-6 text-center text-base xl:text-base">
+              Researcher <span class="mx-1 inline-block w-[6px] xl:w-[8px]  h-[6px] xl:h-[8px] bg-white rounded-full"></span>
+              Developer <span class="mx-1 inline-block w-[6px] xl:w-[8px] h-[6px] xl:h-[8px] bg-white rounded-full"></span> Teacher
             </div>
             <div class="my-2 xl:my-4 text-center text-lg xl:text-xl font-script">
               CREATING INTELLIGENT SYSTEMS FOR HUMAN-CENTERED FUTURE
@@ -37,12 +37,12 @@
             <h3 class="heading-page">
               About
             </h3>
-            <p v-html="personalData.about" class="text-main-gray text-sm xl:text-lg text-justify">
+            <p v-html="personalData.about" class="text-main-gray text-sm xl:text-base text-justify">
             </p>
           </div>
 
         <div class="shadow-[0px_4px_25px_0px_rgba(27,39,71,0.15)] border border-[rgba(27,39,71,0.5)]
-        w-[180px] md:w-[280px] xl:w-[360px] bg-center bg-cover h-[180px] md:h-[280px] xl:h-[360px] rounded-full bg-[url('/assets/images/me.png')]">
+        w-[160px] md:w-[240px] xl:w-[300px] bg-center bg-cover h-[160px] md:h-[240px] xl:h-[300px] rounded-full bg-[url('/assets/images/me.png')]">
         </div>
       </div>
 
@@ -53,14 +53,14 @@
       <div class="container flex flex-col justify-center items-center">
         <HeadingTitle tit="Education" />
         <div class="flex flex-wrap justify-start align-center px-2 xl:px-8">
-            <div class="w-full xl:w-1/2 p-2 xl:p-8 text-main-dark-blue" v-for="item in education" :key="item.id">
+            <div class="w-full xl:w-1/2 p-2 xl:py-8 text-main-dark-blue" v-for="item in education" :key="item.id">
 
-              <div class="card py-2 xl:py-4 px-3 xl:px-6 flex flex-col justify-center items-start">
-                  <div class="mb-2 xl:mb-4">
+              <div class="card py-2 px-3 xl:px-6 flex flex-col justify-center items-start">
+                  <div class="mb-2">
                     <nuxt-icon class="text-[28px] text-main-yellow" name="book" />
                   </div>
                   <div class="flex flex-col md:flex-row text-sm xl:text-base w-full mb-2">
-                      <div class="text-sm md:text-base xl:text-lg font-semibold">
+                      <div class="text-sm md:text-base font-semibold">
                         {{ item.title }}
                       </div>
                       <div class="mt-2 md:mt-0 ml-auto text-sm font-semibold">
@@ -68,43 +68,46 @@
                       </div>
                   </div>
 
-                  <div class="text-sm flex-col xl:text-base flex mb-2 w-full">
+                  <div class="text-sm flex mb-1 w-full">
                       <div class="">
                         {{ item.institution }}
                       </div>
-                      <div class="mt-2 ml-auto font-semibold">
+                      <div class=" ml-auto font-semibold">
                         GPA:
                         {{ item.gpa }}
                       </div>
                   </div>
 
-                  <div  class="w-full xl:h-[220px] flex flex-col ">
-                      <div class="flex my-2">
-                          <div class="grow !w-[76px] xl:!w-[86px] text-sm xl:text-base font-semibold mr-4">
+                  <div  class="w-full xl:h-[200px] flex flex-col ">
+                      <div class="my-1">
+                          <div class="text-sm font-semibold">
                               Courses:
                           </div>
-                          <div class="text-sm xl:text-base">
+                          <div class="text-sm text-justify">
                             {{ item.courses }}
                           </div>
                       </div>
-                      <div class="flex my-2">
-                        <div class="!w-[76px] xl:!w-[86px] text-sm xl:text-base font-semibold mr-1">
+                      <div v-if="!!item.awards" class="my-1">
+                        <div class="text-sm font-semibold">
                           Highlights:
                         </div>
-                        <div class="text-sm xl:text-base italic">
+                        <div class="text-sm italic text-justify">
                           {{ item.awards }}
                         </div>
                       </div>
-                      <div class="text-sm xl:text-base flex mb-1 mt-auto">
-                          <div class="!w-[76px] xl:!w-[86px] font-semibold mr-1">
+                      <div class=" flex text-sm my-1">
+                          <div class="font-semibold mr-1">
                             Thesis:
                           </div>
                           <div>
                             {{ item.thesis }}
                           </div>
                       </div>
-                      <div class="flex text-sm xl:text-base my-2">
-                        <div class="!w-[76px] xl:!w-[86px] font-semibold mr-1">
+                    <div v-if="!!item.thesisdescription" class="text-sm text-justify">
+                        {{ item.thesisdescription }}
+                    </div>
+                      <div class="flex text-sm my-1 mb-2">
+                        <div class="mr-1">
                           Advisors:
                         </div>
                         <div>

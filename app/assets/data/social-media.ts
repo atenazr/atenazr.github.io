@@ -6,7 +6,7 @@ export const socialMedia=[
     },
     {
         id:2,
-        link:'mailto:zareatena17@gmail.com',
+        link:'mailto:zrefatimah@gmail.com',
         icon:'email'
     },
     {
