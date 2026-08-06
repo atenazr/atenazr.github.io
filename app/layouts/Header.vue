@@ -71,6 +71,11 @@ const menus=[
     id:3,
     name:'Publications',
     link:'/#publications'
+  },
+  {
+    id:4,
+    name:'Projects',
+    link:'/projects'
   }
 ]
 
