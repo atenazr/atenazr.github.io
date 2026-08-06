@@ -1,9 +1,9 @@
 export const publications=[
     {
         id:1,
-        title:'Detection of fake photo attacks using DeepLabv3 model',
-        authors:'Zare, F., & Hosseinpoor, M. (in press)',
-        publisher:'Proceeding of the 6th International Conference on Soft Computing'
+        title: 'Detection of Face Anti-Spoofing Attacks using DeepLabV3',
+        authors:'Zare, F. (in preparation)',
+        publisher:''
     },
     {
         id:2,

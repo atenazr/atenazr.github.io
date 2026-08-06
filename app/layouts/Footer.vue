@@ -1,7 +1,7 @@
 <template>
   <div class="w-full border-t-4 border-main-yellow text-secondary-white bg-main-dark-blue py-1.5 px-4 xl:py-3 xl:px-8">
     <div class="container flex align-center justify-center">
-      <div class="text-xs xl:text-sm font-medium ml-2.5 xl:ml-5 mr-auto">
+      <div class="text-xs font-medium ml-2.5 xl:ml-5 mr-auto">
          Developed by Fatemeh Zare.
         <br>
           All Rights Reserved.

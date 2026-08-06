@@ -21,7 +21,7 @@
                 </a>
             </div>
 
-            <MainBtn internal="" link="https://drive.google.com/file/d/1Yi5JwQ0r6DwBRZDUL9UQFHUnLtUWUyvi/view?usp=sharing"
+            <MainBtn internal="" link="https://drive.google.com/file/d/1NXwnaUW3nlkrpW3jIv3mnEM-m9h_3UsR/view?usp=sharing"
                      text="Download CV" />
 
           </div>
