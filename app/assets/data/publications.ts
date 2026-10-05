@@ -1,9 +1,15 @@
 export const publications=[
     {
+        id:0,
+        title:'DEEPFAS: An interpretable framework to detect Face Anti-Spoofing Attacks using DeepLabV3 and Vision Transformer',
+        authors:'Zare, F., Yousefzade, H., Akhavanpour, A., & Hosseinpoor, M. (Final Editing)',
+        publisher:'(in progress)'
+    },
+    {
         id:1,
-        title: 'Detection of Face Anti-Spoofing Attacks using DeepLabV3',
-        authors:'Zare, F. (in preparation)',
-        publisher:''
+        title:'Detection of Face Anti-Spoofing Attacks Using DeepLabV3',
+        authors:'Zare, F., & Hosseinpoor, M. (2025)',
+        publisher:'Proceedings of the 6th International Conference on Soft Computing'
     },
     {
         id:2,

@@ -4,7 +4,7 @@
       <div class="text-xs font-medium ml-2.5 xl:ml-5 mr-auto">
          Developed by Fatemeh Zare.
         <br>
-          All Rights Reserved.
+          All Rights Reserved. <span class="ml-1 text-[10px]">(last updated Oct 2026)</span>
       </div>
       <div class="flex h-full justify-center align-center mr-2.5 xl:mr-5">
         <a target="_blank" class="p-1 mx-1 xl:mx-2" v-for="item in socialMedia" :key="item.id" :href="item.link" >

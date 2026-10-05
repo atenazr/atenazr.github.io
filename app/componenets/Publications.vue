@@ -18,6 +18,7 @@
                 <span>
                   {{ item.publisher }}
                 </span>
+                .
               </li>
           </ul>
       </div>

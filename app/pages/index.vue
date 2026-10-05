@@ -108,7 +108,7 @@
                     </div>
                       <div class="flex text-sm my-1 mb-2">
                         <div class="mr-1">
-                          Advisors:
+                          Supervisors:
                         </div>
                         <div>
                           {{ item.supervisors }}
