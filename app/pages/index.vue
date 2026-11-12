@@ -78,15 +78,12 @@ async function getNews() {
   news.value = data;
 }
 
-onMounted(async() => {
-  await getNews()
-  await getEducation()
-  await getPublications()
-  await getExp()
-  loading.value = false
-})
 
-
+await getNews()
+await getEducation()
+await getPublications()
+await getExp()
+loading.value = false
 </script>
 
 <style scoped>
