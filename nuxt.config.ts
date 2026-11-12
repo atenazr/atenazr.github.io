@@ -3,8 +3,8 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      supabaseUrl: "",
-      supabaseKey: "",
+      supabaseUrl: "https://wzptumsdqcabmcfijozh.supabase.co",
+      supabaseKey: "sb_publishable_uFuHXyoqcQEZ8fWrT64YtQ_4_42fmBQ",
     },
   },
   compatibilityDate: "2025-07-15",
