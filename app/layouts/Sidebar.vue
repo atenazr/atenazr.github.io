@@ -6,6 +6,9 @@
           </div>
 
           <div class="my-4 ml-8 lg:ml-0 flex flex-col justify-center items-start">
+            <div class="text-main-dark-blue text-xs lg:text-sm py-1 my-1">
+              Fatemeh Zare, MSc
+            </div>
             <div  class="text-main-dark-blue flex justify-start items-center py-1 my-1">
               <nuxt-icon class="text-[14px] xl:text-[20px]" name="location" />
               <span class="text-[10px] lg:text-sm mx-2 ">

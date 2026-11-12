@@ -9,7 +9,7 @@
             <nuxt-icon class="text-xl lg:text-[28px] text-main-yellow" name="book" />
           </div>
           <div class="flex flex-col md:flex-row text-sm xl:text-base w-full mb-2">
-            <div class="text-[10px] lg:text-xs lg:text-sm font-semibold">
+            <div class="text-xs lg:text-sm font-semibold">
               {{ item.degree }}
             </div>
             <div class="mt-2 md:mt-0 ml-auto text-[10px] lg:text-xs">
