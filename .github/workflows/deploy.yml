@@ -1,5 +1,6 @@
 name: Deploy Nuxt 4 to GitHub Pages
 
+
 on:
   push:
     branches: [main]
@@ -22,7 +23,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
@@ -30,6 +31,9 @@ jobs:
 
       - name: Generate static site
         run: npm run generate
+        env:
+          NUXT_PUBLIC_SUPABASE_URL: ${{ vars.NUXT_PUBLIC_SUPABASE_URL }}
+          NUXT_PUBLIC_SUPABASE_KEY: ${{ secrets.NUXT_PUBLIC_SUPABASE_KEY }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
