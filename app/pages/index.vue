@@ -39,7 +39,6 @@ import { personalData } from "../assets/data/personal-data";
 import HeadingTitle from "../componenets/utils/HeadingTitle.vue";
 import Publications from "../componenets/Publications.vue";
 
-import { ref, onMounted } from 'vue'
 import { createClient } from '@supabase/supabase-js'
 import Education from "../componenets/Education.vue";
 import Experience from "../componenets/Experience.vue";
@@ -47,13 +46,19 @@ import Experience from "../componenets/Experience.vue";
 const config = useRuntimeConfig()
 const supabase = createClient(config.public.supabaseUrl, config.public.supabaseKey)
 
-const education = ref([])
-const publications = ref([])
-const experience = ref([])
-const news = ref([])
+interface NewsItem {
+  date: string
+  content: string
+}
+
+const education = ref<any[]>([])
+const publications = ref<any[]>([])
+const experience = ref<any[]>([])
+const news = ref<NewsItem[]>([])
 
 async function getEducation() {
   const { data, error } = await supabase.from('education').select('*')
+  if (error) throw error
   if(!!data){
     education.value = data
   }
@@ -61,6 +66,7 @@ async function getEducation() {
 
 async function getPublications() {
   const {data, error} = await supabase.from('publications').select('*')
+  if (error) throw error
   if (!!data) {
     publications.value = data
   }
@@ -68,6 +74,7 @@ async function getPublications() {
 
 async function getExp() {
   const {data, error} = await supabase.from('experience').select('*').order('id')
+  if (error) throw error
   if (!!data) {
     experience.value = data.reverse();
   }
@@ -75,6 +82,7 @@ async function getExp() {
 
 async function getNews() {
   const {data, error} = await supabase.from('news').select('*')
+  if (error) throw error
   if (!!data) {
     news.value = data;
   }

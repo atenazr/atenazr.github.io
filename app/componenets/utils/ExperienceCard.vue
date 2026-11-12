@@ -32,7 +32,7 @@
             </div>
             <a v-for="(item,i) in learning_more"
                :href="item" target="_blank" class="ml-2.5 font-bold">
-              {{i+1}}. Link
+              {{Number(i)+1}}. Link
             </a>
           </div>
         </div>
