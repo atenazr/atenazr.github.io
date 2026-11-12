@@ -1,43 +1,62 @@
 <template>
-  <div id="pub" class=" w-full bg-secondary-white text-main-dark-blue p-4 xl:p-8 pb-6 xl:pb-12">
-    <div id="publications" class="w-full py-2 xl:py-4 px-4 xl:px-8"></div>
-    <div class="w-full container">
+  <div id="pub" class=" w-full text-main-dark-blue">
+    <div class="w-full">
       <HeadingTitle tit="Publications" />
-      <div class=" w-full pl-5 xl:pl-10 pr-3 xl:pr-6 py-1.5 xl:py-3">
-          <ul class="list-disc">
-              <li v-for="item in publications" :key="item.id"
-                  class="w-full text-sm text-justify text-secondary-white mb-1 xl:mb-2">
-                <span>
-                    {{ item.authors }}
-                </span>
-                .
-                <span class="italic">
-                  {{ item.title }}
-                </span>
-                .
-                <span>
-                  {{ item.publisher }}
-                </span>
-                .
-              </li>
+      <div class=" w-full py-2 xl:py-3">
+          <ul class="list-disc list-inside whitespace-normal">
+                <template v-for="item in publications" :key="item.id">
+                  <li v-if="item.is_journal" class="whitespace-normal w-full text-xs lg:text-sm text-justify mb-1 xl:mb-2">
+                    <span>
+                        {{ item.authors_list + ' ' }}
+                    </span>
+                    <span class="italic">
+                      {{ item.name }}.
+                    </span>
+                    <span v-if="!item.is_published">
+                      Under review at
+                    </span>
+                    <span>
+                      {{item.publisher }}.
+                    </span>
+                  </li>
+                </template>
           </ul>
-      </div>
 
+          <div class="text-xs lg:text-sm mt-4 mb-2">
+            Conference papers (written in Farsi):
+          </div>
+            <ul class=" list-disc list-inside">
+              <template v-for="item in publications" :key="item.id">
+                <li v-if="!item.is_journal && !!item.is_selected" class="w-full text-sm text-justify mb-1 xl:mb-2">
+                        <span>
+                            {{ item.authors_list + ' ' }}
+                        </span>
+                    <span class="italic">
+                          {{ item.name }}.
+                        </span>
+                    <span v-if="!item.is_published">
+                          Under review at
+                        </span>
+                    <span>
+                          {{item.publisher }}.
+                        </span>
+                </li>
+              </template>
+            </ul>
+          <div class="text-[10px] lg:text-xs my-2">
+            Full list of publications <span class="text-main-yellow">(<a href="https://drive.google.com/file/d/1oRcwIAGsNNsWxLK0lJfpT2p5HDW_GBPH/view?usp=sharing" target="_blank">Link</a>)</span>
+          </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import HeadingTitle from "./utils/HeadingTitle.vue";
-import {publications} from "../assets/data/publications";
+const props = defineProps(['publications'])
+
 </script>
 
 <style scoped>
-#pub{
-  background:linear-gradient(35deg,rgba(0,0,0,70%) 30%, rgba(0,0,0,30%) 90%),
-  url('/assets/images/publications.webp');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+
 </style>

@@ -1,6 +1,6 @@
 <template>
-<header class="w-full px-4 top-3 fixed z-20">
-  <div class="container w-full  bg-main-yellow md:pt-3 rounded-3xl">
+<header class="w-full bg-secondary-white md:pt-3">
+  <div class="container w-full ">
       <div class="md:hidden text-sm">
           <div @click="switchMenu" class=" md:hidden p-2 cursor-pointer">
             <nuxt-icon name="menu" class="text-main-dark-blue text-[28px]" />
@@ -11,27 +11,19 @@
             <div class="w-full">
                 <div v-for="item in menus" :key="item.id" class="w-full">
                   <a class=" bg-secondary-white w-full inline-block font-bold p-4 border-b border-main-dark-blue text-main-dark-blue hover:text-main-yellow"
-                     v-if="item.name== 'Experience'" :href="item.link">
+                      :href="item.link">
                     {{ item.name }}
                   </a>
-                  <router-link class="bg-secondary-white w-full inline-block font-bold  p-4  border-b border-main-dark-blue text-main-dark-blue hover:text-main-yellow"
-                      v-else :to="item.link">
-                    {{ item.name }}
-                  </router-link>
                 </div>
             </div>
           </div>
       </div>
-      <div class="container hidden md:flex w-full align-center justify-start">
+      <div class="hidden md:flex align-center justify-center">
           <div v-for="item in menus" :key="item.id"
-               class="text-white border-transparent font-bold xl:text-base border-b-4 hover:border-main-gray duration-[0.2s] mx-2.5 xl:mx-5 pb-2 px-1 ease-in-out  hover:text-main-dark-blue hover:opacity-75">
-            <a v-if="item.name== 'Experience'" :href="item.link">
+               class="border-transparent font-bold xl:text-sm border-b-4 hover:border-main-gray duration-[0.2s] mx-2.5 xl:mx-5 pb-2 px-1 ease-in-out  text-main-dark-blue">
+            <a :href="item.link">
               {{ item.name }}
             </a>
-            <router-link
-                v-else :to="item.link">
-              {{ item.name }}
-            </router-link>
           </div>
       </div>
   </div>
@@ -49,7 +41,7 @@ const switchMenu=function(){
 const menus=[
   {
     id:0,
-    name:'Home',
+    name:'About',
     link:'/'
   },
   {
@@ -58,25 +50,15 @@ const menus=[
     link:'/#education'
   },
   {
-    id:2,
-    name:'Experience',
-    link:'/experience'
-  },
-  {
-    id:3,
-    name:'Skills',
-    link:'/#skills'
-  },
-  {
     id:3,
     name:'Publications',
     link:'/#publications'
   },
   {
-    id:4,
-    name:'Projects',
-    link:'/projects'
-  }
+    id:2,
+    name:'Experience',
+    link:'/#experience'
+  },
 ]
 
 </script>

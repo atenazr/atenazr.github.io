@@ -4,7 +4,7 @@
 @import "tailwindcss";
 
 .heading-page {
-    @apply text-main-dark-blue text-lg xl:text-xl font-bold cursor-pointer
+    @apply text-main-dark-blue text-sm xl:text-base font-bold cursor-pointer
 }
 
 

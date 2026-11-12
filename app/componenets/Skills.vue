@@ -1,18 +1,23 @@
 <template>
-  <div class="w-full flex flex-wrap">
-    <div class=" w-full md:w-1/2 xl:w-1/3 p-2 md:p-4" v-for="item in skills" :key="item.id">
-      <div class="w-full card flex flex-col">
-        <div class="text-white font-semibold px-2 py-3 text-center bg-main-dark-blue text-sm md:text-md">
-          {{ item.title }}
+  <div>
+  <HeadingTitle tit="Skills" />
+    <div class="w-full flex flex-wrap">
+      <div class=" w-full p-2 md:p-4" v-for="item in skills" :key="item.id">
+        <div class="w-full flex flex-col">
+          <div class="w-[220px] rounded-2xl text-white font-semibold px-2 py-3 text-center bg-main-dark-blue text-sm md:text-md">
+            {{ item.category }}
+          </div>
+          <div v-html="item.cat_list" class="text-sm mt-4 text-justify xl:text-base text-main-dark-blue" />
         </div>
-        <div v-html="item.description" class="text-sm text-justify xl:text-base md:h-[220px] text-main-dark-blue p-2 xl:p-4" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { skills } from "../assets/data/skills";
+import HeadingTitle from "../componenets/utils/HeadingTitle.vue";
+
+const props = defineProps(['skills'])
 
 </script>
 
