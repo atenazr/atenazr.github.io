@@ -1,9 +1,5 @@
 <template>
   <div class="w-full py-2 bg-secondary-white">
-    <div v-if="!!loading" class="min-h-dvh min-w-dvw text-main-gray">
-      loading ...
-    </div>
-    <template v-else>
           <HeadingTitle tit="About"  />
           <div  id="about" class="py-4 w-full">
             <p v-html="personalData.about" class="text-main-dark-blue text-xs lg:text-sm text-justify">
@@ -35,7 +31,6 @@
           <div class="mt-8 text-[10px] lg:text-xs text-main-gray">
              This portfolio was developed using Nuxt,js, Tailwind CSS, and supabase as the API server (<a class="text-main-yellow" href="https://github.com/atenazr/atenazr.github.io">Link</a>).<br>Last updated November 2026
           </div>
-    </template>
   </div>
 </template>
 
@@ -57,7 +52,6 @@ const publications = ref([])
 const experience = ref([])
 const news = ref([])
 
-const loading = ref(true)
 async function getEducation() {
   const { data, error } = await supabase.from('education').select('*')
   education.value = data
@@ -83,7 +77,6 @@ await getNews()
 await getEducation()
 await getPublications()
 await getExp()
-loading.value = false
 </script>
 
 <style scoped>
