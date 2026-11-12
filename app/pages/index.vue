@@ -54,24 +54,31 @@ const news = ref([])
 
 async function getEducation() {
   const { data, error } = await supabase.from('education').select('*')
-  education.value = data
+  if(!!data){
+    education.value = data
+  }
 }
 
 async function getPublications() {
-  const { data, error } = await supabase.from('publications').select('*')
-  publications.value = data
+  const {data, error} = await supabase.from('publications').select('*')
+  if (!!data) {
+    publications.value = data
+  }
 }
 
 async function getExp() {
-  const { data, error } = await supabase.from('experience').select('*').order('id')
-  experience.value = data.reverse();
+  const {data, error} = await supabase.from('experience').select('*').order('id')
+  if (!!data) {
+    experience.value = data.reverse();
+  }
 }
 
 async function getNews() {
-  const { data, error } = await supabase.from('news').select('*')
-  news.value = data;
+  const {data, error} = await supabase.from('news').select('*')
+  if (!!data) {
+    news.value = data;
+  }
 }
-
 
 await getNews()
 await getEducation()
