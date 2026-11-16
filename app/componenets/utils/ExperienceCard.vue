@@ -11,7 +11,7 @@
                  {{ title }}
               </div>
               <div v-if="!!link" class="mx-1">
-                ( <span> <a class="text-main-yellow" :href="link"> Link</a></span> )
+                ( <span> <a class="hover:text-main-yellow duration-[0.5s]" :href="link"> Link</a></span> )
               </div>
           </div>
           <ul class="my-2 list-disc list-inside">
@@ -28,10 +28,10 @@
 
           <div v-if="!!learning_more" class="text-[8px] lg:text-[10px] my-2 flex align-center justify-start">
             <div>
-              To learn more about it, you can see these links
+              To learn more, you can see these links
             </div>
             <a v-for="(item,i) in learning_more"
-               :href="item" target="_blank" class="ml-2.5 font-bold">
+               :href="item" target="_blank" class="ml-2.5 font-bold hover:text-main-yellow duration-[0.5s]">
               {{Number(i)+1}}. Link
             </a>
           </div>

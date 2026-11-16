@@ -1,7 +1,5 @@
 export const personalData={
-    'about':'I am a <strong> Software Engineering </strong> graduate student. My research background is mainly in <strong>Deep Learning, Computer Vision, and Image Analysis </strong>.' +
-        '\n' +
-        'Through my academic and professional experiences, I have worked on designing AI-driven solutions while considering both <strong>technical performance and real-world usability</strong>. I am especially interested in <strong>trustworthy AI and Medical AI</strong>, where models are not only accurate but also reliable, understandable, and beneficial for users and clinicians.\n' +
-        '\n' +
-        'I am currently seeking opportunities to contribute to <strong>research groups working on medical image analysis, multimodal learning, and intelligent systems</strong>, with a focus on <strong>explianability, interpretability, and privacy-preserving</strong>.\n'
+    'about':'I am a graduate student in software engineering. My research background mainly focuses on <strong> deep learning, computer vision, and image analysis.</strong> Through my academic and professional experience, I have designed AI-driven solutions while balancing technical performance and real-world usability.'
+    +'\n'+
+    ' I am especially interested in <strong>trustworthy AI and medical AI</strong>, where models are not only <strong>accurate but also reliable, understandable, and beneficial for users and clinicians</strong>. I am currently seeking opportunities to contribute to research groups working on medical image analysis, multimodal learning, and intelligent systems, with a focus on explainability, interpretability, and privacy-preserving methods.'
 }

@@ -29,7 +29,7 @@
 
           <div  class="w-full lg:h-[140px] flex flex-col ">
             <div class="my-1">
-              <div class="text-xs lg:text-sm font-semibold">
+              <div class="text-[10px] lg:text-xs font-semibold">
                 Courses:
               </div>
               <div class="text-[10px] lg:text-xs text-justify">
@@ -37,11 +37,11 @@
               </div>
             </div>
 
-            <div class=" flex flex-col text-xs lg:text-sm my-1">
+            <div class=" flex flex-col text-[10px] lg:text-xs  my-1">
               <div class="font-semibold mr-1">
                 Thesis:
               </div>
-              <div class="text-[10px] lg:text-xs">
+              <div class="">
                 {{ item.thesis }}
               </div>
             </div>

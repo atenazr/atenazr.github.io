@@ -28,7 +28,7 @@
 
           <experience :experience="experience" />
 
-          <div class="mt-8 text-[10px] lg:text-xs text-main-gray">
+          <div class="mt-8 text-[10px] text-main-gray">
              This portfolio was developed using Nuxt,js, Tailwind CSS, and supabase as the API server (<a class="text-main-yellow" href="https://github.com/atenazr/atenazr.github.io">Link</a>).<br>Last updated November 2026
           </div>
   </div>
